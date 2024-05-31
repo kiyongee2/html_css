@@ -1,0 +1,19 @@
+img{
+  border: 1px solid #ccc;
+}
+table{
+  width: 700px;
+  border: 2px solid #ccc;
+  border-collapse: collapse;
+}
+table th, td{
+  border: 1px dotted #ccc;
+  height: 40px;
+  text-align: center;
+}
+table thead{
+  background-color: #eee;
+}
+/* th, td{
+  padding: 10px;
+} */
