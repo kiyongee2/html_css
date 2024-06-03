@@ -18,10 +18,17 @@
                 <li>
                     <label for="major" class="reg">학과</label>
                     <select id="major" name="major">
-                        <option value="software" selected>소프트웨어학과</option>
-                        <option value="mechanic">기계공학과</option>
-                        <option value="electric">전기전자공학과</option>
-                        <option value="archi">건축공학과</option>
+                        <optgroup label="공과대학">
+                            <option value="software" selected>소프트웨어학과</option>
+                            <option value="mechanic">기계공학과</option>
+                            <option value="electric">전기전자공학과</option>
+                            <option value="archi">건축공학과</option>
+                        </optgroup>
+                        <optgroup label="경영대학">
+                            <option value="경영학" selected>경영학과</option>
+                            <option value="경제학">경제학과</option>
+                            <option value="회계학">회계학과</option>
+                        </optgroup>
                     </select>
                 </li>
             </ul>
