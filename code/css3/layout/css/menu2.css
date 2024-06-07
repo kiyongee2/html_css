@@ -1,7 +1,7 @@
 *{margin: 0; padding: 0}
 
 #container{
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 header{
@@ -9,22 +9,21 @@ header{
   background: beige;
 }
 header #logo{
-  width: 200px;
+  width: 20%;
   height: 80px;
   float: left;
   line-height: 80px;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 header #logo h1 a{color: orange; text-decoration: none;}
 header #logo h1 a:hover{color: rgb(211, 3, 3);}
 nav{
-  width: 760px;
+  width: 70%;
   height: 80px;
   float: right;
   line-height: 80px;
-  text-align: right;
 }
-nav ul{padding-left: 100px;}
+nav ul{padding-left: 200px;}
 nav ul li{
   list-style: none;
   float: left;
@@ -40,5 +39,6 @@ ul li a:hover{
   color: white;
 }
 section{
-  margin: 20px;
+  width: 80%;
+  margin: 20px auto;
 }
