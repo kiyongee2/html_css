@@ -13,8 +13,7 @@ a{
 ul li{list-style: none;}
 h1, h2{text-align: center; margin: 20px}
 
-/* PC 기준 */
-/* header 스타일(공통) */
+/* header 스타일 */
 .navbar{
   display: flex;
   flex-direction: column;
@@ -53,7 +52,7 @@ h1, h2{text-align: center; margin: 20px}
   width: 90%; 
   margin: 0 auto;
 }
-#container #main #contents h1{
+#container #main #contents h2{
   margin: 30px 0; 
   text-align: center;
 } 
@@ -161,7 +160,7 @@ footer #footer-menu li:nth-of-type(4){
 }
 
 
-/* 모바일 기준 - 768px 미만 */
+/* 태블릿 기준 - 768px 이상 */
 @media screen and (min-width: 768px){
   .navbar{
     display: flex;
@@ -179,12 +178,6 @@ footer #footer-menu li:nth-of-type(4){
   }
   .navbar_toggleBtn{
     display: none;
-  }
-  #container #main{
-    width: 1000px;
-  }
-  #container #main #contents{
-    width: 900px; 
   }
   footer #footer-menu{
     margin: 10px 40px;
@@ -212,7 +205,7 @@ footer #footer-menu li:nth-of-type(4){
     line-height: 1.8;
   }
   #main #contents #watermelon, #strawberry{
-    width: 800px;
+    width: 700px;
     height: 350px;
     margin: 20px auto;
   }
@@ -225,13 +218,57 @@ footer #footer-menu li:nth-of-type(4){
 
   /* board 스타일 */
   #contents table{
-    width: 750px;
+    width: 650px;
     margin: 0 auto;
   }
 
   /* 로그인 스타일 */
   #contents form{
-    width: 450px;
+    width: 400px;
     margin-bottom: 200px;
+  }
+}
+
+/* PC 기준 - 1024px 이상 */
+@media screen and (min-width: 1024px){
+  /* 공통 스타일 */
+  #main{
+    width: 1200px;
+  }
+  #main contents{
+    width: 1100px;
+  }
+  /* index 스타일 */
+  #main #contents .main_pic{
+    width: 600px; 
+    margin-bottom: 100px;
+  }
+  #main #contents img{
+    width: 600px;
+    height: 560px;
+    border-radius: 5px;
+  }
+
+  /* product 스타일 */
+  #main #contents #watermelon, #strawberry{
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+  }
+  #main #contents #watermelon img, #contents #strawberry img{
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+  }
+
+  /* board 스타일 */
+  #contents table{
+    width: 750px;
+  }
+
+  /* 로그인 스타일 */
+  #contents form{
+    width: 500px;
   }
 }
