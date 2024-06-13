@@ -14,20 +14,29 @@
         }*/
 
         //익명 함수로 정의
-        var sayHello = function(){
+        /*let greet = function(){
+            console.log("안녕하세요~");
+        }*/
+
+        //화살표 함수로 정의
+        let greet = () => {
             console.log("안녕하세요~");
         }
-        sayHello();   //함수 호출
-        sayHello();
+        greet();   //함수 호출
+        greet();
 
         // 매개 변수가 있는 함수
-        function sayHello2(name){ //매개변수가 있는 함수
+        /*function sayHello2(name){ //매개변수가 있는 함수
+            document.write("안녕~" + name + '<br>');
+        }*/
+       
+        let greet2 = (name) => {
             document.write("안녕~" + name + '<br>');
         }
 
-        sayHello2("나함수");   //함수 호출
-        sayHello2("구름이");
-        sayHello2("Elsa");
+        greet2("나함수");   //함수 호출
+        greet2("구름이");
+        greet2("Elsa");
     </script>
 </body>
 </html>

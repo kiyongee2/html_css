@@ -29,13 +29,15 @@
     //let y = 3;  //재선언 불가
     console.log(y); //2
 
-    //코드는 위에서 아래로 순차적으로 해석됨.
+    //변수를 선언하고 할당했을 때 변수 선언을 자바스크립트의
+    //스코프(scope) 맨 위로 올려 실행하는 것
     console.log(a);
-    var a = 1;     //호이스팅(인터프리터가 나중에 선언해도 기억함)
+    var a = 1;     
     console.log(a)
 
+    //let은 호이스팅이 안됨.
     console.log(b);
-    let b = 2;    //let은 호이스팅이 안됨.
+    let b = 2;    
   </script>
 </head>
 <body>
