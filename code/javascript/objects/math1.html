@@ -61,20 +61,20 @@
       두 눈의 수가 같으면 "Double Thrown!!" 출력
       */
       for(var i = 1; i <= 10; i++){
-          let dice1 = Math.floor(Math.random()*6) + 1;
-          let dice2 = Math.floor(Math.random()*6) + 1;
-          let total = dice1 + dice2;
-          console.log(total);
+        let dice1 = Math.floor(Math.random()*6) + 1;
+        let dice2 = Math.floor(Math.random()*6) + 1;
+        let total = dice1 + dice2;
+        console.log(total);
 
-          if(total == 8){
-              console.log("Eight Thrown!");
-          }
-          if(total == 11){
-              console.log("Eleven Thrown!");
-          }
-          if(dice1 == dice2){
-              console.log("Double Thrown!");
-          }
+        if(total == 8){
+            console.log("Eight Thrown!");
+        }
+        if(total == 11){
+            console.log("Eleven Thrown!");
+        }
+        if(dice1 == dice2){
+            console.log("Double Thrown!");
+        }
       }
     </script>
 </body>

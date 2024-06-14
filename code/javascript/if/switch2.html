@@ -7,7 +7,21 @@
 </head>
 <body>
   <script>
-    let month = 9;
+    let food = "banana";
+    switch(food){
+      case "banana":
+      case "apple":
+        document.write("과일입니다.<br>");
+        break;
+      case "garlic":
+        document.write("채소입니다<br>");
+        break;
+      default:
+        document.write("과일도 채소도 아닙니다.<br>");
+        break;
+    }
+
+    /*let month = 9;
     let day;
 
     switch(month){
@@ -18,7 +32,7 @@
       case 4: case 6: case 9: case 11:
         day = 30;
     }
-    document.write(month + "월은 " + day + "일까지 있습니다.");
+    document.write(month + "월은 " + day + "일까지 있습니다.");*/
   </script>
 </body>
 </html>
