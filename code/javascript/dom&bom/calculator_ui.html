@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table td{
+      width: 50px;
+    }
+    table button{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <td colspan="3">
+        <button onclick="clearCalculator()">AC</button>
+      </td>
+      <td>
+        <button onclick="setSign('/')">/</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="setNumber(7)">7</button>
+      </td>
+      <td>
+        <button onclick="setNumber(8)">8</button>
+      </td>
+      <td>
+        <button onclick="setNumber(9)">9</button>
+      </td>
+      <td>
+        <button onclick="setSign('*')">*</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="setNumber(4)">4</button>
+      </td>
+      <td>
+        <button onclick="setNumber(5)">5</button>
+      </td>
+      <td>
+        <button onclick="setNumber(6)">6</button>
+      </td>
+      <td>
+        <button onclick="setSign('-')">-</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="setNumber(1)">1</button>
+      </td>
+      <td>
+        <button onclick="setNumber(2)">2</button>
+      </td>
+      <td>
+        <button onclick="setNumber(3)">3</button>
+      </td>
+      <td>
+        <button onclick="setSign('+')">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button onclick="setNumber(0)">0</button>
+      </td>
+      <td>
+        <button onclick="setNumber('.')">.</button>
+      </td>
+      <td>
+        <button onclick="setSign('=')">=</button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    /*
+    //eval() 사용하기
+    let calculate = "";
+
+    function setNumber(num){
+      calculate += num;
+      //console.log(typeof(num));
+      console.log(calculate);
+    }
+
+    function setSign(sign){
+      if(sign == "="){
+        alert("결과: " + eval(calculate));
+        calculate = "";
+      }else{
+        calculate += sign;
+      }
+      calculate = "";
+    }
+    
+    function clearCalculator(){
+      calculate = "";
+    }
+    */    
+
+    //eval() 사용하지 않고 처리
+    let calculate = "";
+    let currentNumber = "";
+    let operations = [];
+
+    function setNumber(num){
+      currentNumber += num;
+      console.log("입력숫자: ", currentNumber);
+    }
+
+    function setSign(sign){
+      console.log("입력기호: ", sign);
+      if(sign == "="){
+        operations.push(currentNumber);
+        calculateResult();
+      } else{
+        if(currentNumber != ""){
+          operations.push(currentNumber);
+        }
+        operations.push(sign);
+        currentNumber = "";
+      }
+    }
+
+    function calculateResult(){
+      //연산 기호 배열의 맨 앞(숫자)
+      let result = parseFloat(operations[0]);
+      // 2+5*2=14
+      for(let i=1; i<operations.length; i += 2){
+        const operator = operations[i];
+        const nextNumber = parseFloat(operations[i+1]);
+
+        if(operator === "+"){
+          result += nextNumber;
+        }else if(operator === "-"){
+          result -= nextNumber;
+        }else if(operator === "*"){
+          result *= nextNumber;
+        }else if(operator === "/"){
+          result /= nextNumber;
+        }
+      }
+
+      alert("결과: " + result);
+      calculate = "";
+      currentNumber = "";
+      operations = [];
+    }
+
+    function clearCalculator(){
+      calculate = "";
+      currentNumber = "";
+      operations = [];
+    }
+  </script>
+</body>
+</html>

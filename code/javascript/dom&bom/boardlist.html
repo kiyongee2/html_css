@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판 만들기</title>
+  <style>
+    table{
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+    table th, td{border: 1px solid #ccc; padding: 10px;}
+    table input[type='text']{width: 300px; height: 25px;}
+    table textarea{width: 300px;}
+  </style>
+</head>
+<body>
+  <div>
+    <h3>게시판</h3>
+    <div>
+      <!-- 게시글 작성 폼 -->
+      <table class="tbl">
+        <tbody>
+          <tr>
+            <td>글쓴이</td>
+            <td>
+              <input type="text" id="name" name="name">
+            </td>
+          </tr>
+          <tr>
+            <td>글내용</td>
+            <td>
+              <textarea id="content" name="content" 
+                  rows="6" cols="50"></textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" onclick="writeNote()">글쓰기</button>
+      
+      <!-- 게시글 목록 -->
+      <h4>게시글 목록</h4>
+      <table id="tbl_list">
+        <tr>
+          <th>번호</th>
+          <th>글쓴이</th>
+          <th>내용</th>
+          <th>작성일</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let count = 1;
+
+    let writeNote = () => {
+      let nameVal = document.getElementById('name').value;
+      let contentVal = document.getElementById('content').value;
+      console.log(nameVal, contentVal)
+
+      let table = document.getElementById('tbl_list');
+      let row = document.createElement('tr');
+
+      let td1 = document.createElement('td');
+      let td2 = document.createElement('td');
+      let td3 = document.createElement('td');
+      let td4 = document.createElement('td');
+
+      //게시글 데이터
+      //1. 번호
+      td1.innerText = count;
+      count++;
+
+      //2. 작성자
+      td2.innerText = nameVal;
+
+      //3. 글내용
+      td3.innerText = contentVal;
+
+      //4. 작성일
+      let date = new Date();
+      td4.innerText = date.getFullYear() + '-' + (date.getMonth()+1)
+                        + '-' + date.getDate();
+      // tr에 td 연결
+      row.appendChild(td1);
+      row.appendChild(td2);
+      row.appendChild(td3);
+      row.appendChild(td4);
+
+      // table에 tr 연결
+      table.appendChild(row);
+
+      //입력값 초기화
+      let name = document.getElementById('name');
+      let content = document.getElementById('content');
+      name.value = '';
+      content.value = '';
+    }
+  </script>
+</body>
+</html>

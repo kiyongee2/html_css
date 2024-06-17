@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
+</head>
+<body>
+  <div id="container">
+    <h1>제주 서귀포 감귤</h1>
+    <a href="#" onclick="addContents(); this.onclick=''">더 보기</a>
+    <div id = "info"></div>
+  </div>
+
   <script>
     function addContents(){
       let newP = document.createElement('p');
@@ -13,7 +22,7 @@
       let newImg = document.createElement('img');
       let src = document.createAttribute('src');  //src 속성 추가
       let alt = document.createAttribute('alt')   //alt 속성 추가
-      src.value = "images/감귤.jpg";
+      src.value = "images/tangerine.jpg";
       alt.value = "감귤";
       newImg.setAttributeNode(src);   //img 태그에 연결
       newImg.setAttributeNode(alt);
@@ -22,12 +31,5 @@
       document.getElementById('info').appendChild(newImg);
     }
   </script>
-</head>
-<body>
-  <div id="container">
-    <h1>제주 서귀포 감귤</h1>
-    <a href="#" onclick="addContents(); this.onclick=''">더 보기</a>
-    <div id = "info"></div>
-  </div>
 </body>
 </html>

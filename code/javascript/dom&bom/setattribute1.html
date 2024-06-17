@@ -7,21 +7,30 @@
 </head>
 <body>
   <section id="content">
-    <h2>커피의 세계</h2>
-    <div>
-      <img src="./images/감귤.jpg" alt="찻잔" id="cup">
+    <h2>태그에 속성 설정하기</h2>
+    <p>이름: <input type="text" name="userName" id="userName"></p>
+    <div class="tangerine">
       <div>
-        <img src="./images/감귤_sm.jpg" class="small">
+        <img src="./images/tangerine.jpg" alt="감귤" class="big">
+      </div>
+      <div>
+        <img src="./images/blueberry_sm.jpg" class="small">
       </div>
     </div>
   </section>
 
   <script>
-    let cup = document.querySelector("#cup");
+    //input 태그 속성
+    let input = document.getElementById('userName');
+    input.setAttribute('placeholder', 'name');
+    input.style = "color: coral";
+
+    //img 태그 속성 설정
+    let bigPic = document.querySelector(".big");
     let smallPic = document.querySelector(".small");
 
     smallPic.onclick = function(){
-        cup.setAttribute("src", "./images/복숭아.jpg");
+        bigPic.setAttribute("src", "./images/blueberry.jpg");
     }
   </script>
 </body>

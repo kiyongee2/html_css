@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 이벤트 취소(동작 막기)
+      html 태그중 일부는 기본으로 이벤트가 적용되어 있음
+      a태그는 다른 페이지로 이동하도록 클릭 이벤트가 연결됨
+      form 태그는 버튼이 눌리면 전송되도록 전송 이벤트가 연결된 상태 
+  -->
+  <a href="https://www.naver.com">네이버 이동</a>
+  <a href="https://www.daum.net">다음 이동</a>
+  <script>
+    const aAll = document.querySelectorAll('a');
+    aAll[0].addEventListener('click', (e) => {
+      e.preventDefault();
+    })
+  </script>
+</body>
+</html>

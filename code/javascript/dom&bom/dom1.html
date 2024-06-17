@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      font-size: 1.3em;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="box" id="blue">1</div>
+    <div class="box" id="red">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+  <p>행복한 기분</p>
+
+  <script>
+    let box1 = document.getElementById('blue');
+    console.log(box1);
+    //box1.style.color = 'blue';
+    box1.style = 'color: blue';
+
+    /*
+    let boxes = document.getElementsByClassName('box');
+    console.log(boxes);
+    for(let i=0; i<boxes.length; i++){
+      console.log(boxes[i]);
+    }
+    */
+
+    /*
+    let pTag = document.getElementsByTagName('p');
+    console.log(pTag);
+    */
+
+    let box2 = document.querySelector("#red");
+    console.log(box2);
+    box2.style.color = "red";
+
+    let boxes = document.querySelectorAll('.box');
+    console.log(boxes);
+    console.log(boxes[3].style.color='yellow');
+  </script>
+</body>
+</html>

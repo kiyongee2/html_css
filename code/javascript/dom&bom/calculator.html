@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>
+    값1:
+    <input type="text" id="v1">
+  </p>
+  <p>
+    값2:
+    <input type="text" id="v2">
+  </p>
+  <p>
+    연산자:
+    <input type="text" id="op">
+  </p>
+  <p>
+    결과:
+    <input type="text" id="res">
+  </p>
+  <button type="button" onclick="calc()">계산하기</button>
+  <button type="button" onclick="reset()">초기화</button>
+
+  <script>
+    function calc(){
+      let v1 = document.getElementById('v1');
+      let v2 = document.getElementById('v2');
+      let op = document.getElementById('op');
+      console.log(v1, v2, op);
+
+      let v1Val = v1.value;
+      let v2Val = v2.value;
+      let opVal = op.value;
+      console.log(v1Val, v2Val, opVal);
+      console.log(typeof(v1Val), typeof(v2Val));
+
+      //숫자로 형변환
+      v1Val = Number(v1Val);
+      v2Val = Number(v2Val);
+
+      let result = 0;
+      switch(opVal){
+        case '+':
+          result = v1Val + v2Val;
+          break;
+        case '-':
+          result = v1Val - v2Val;
+          break;
+        case '*':
+          result = v1Val * v2Val;
+          break;
+        case '/':
+          result = v1Val / v2Val;
+          break;
+      }
+      console.log(result);
+      // 계산된 결과값을 화면에 출력
+      let res = document.getElementById('res');
+      res.value = result;
+    }
+
+    function reset(){
+      //초기화
+      document.getElementById('v1').value="";
+      document.getElementById('v2').value="";
+      document.getElementById('op').value="";
+      document.getElementById('res').value="";
+    }
+  </script>
+</body>
+</html>

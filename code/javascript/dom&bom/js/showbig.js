@@ -1,5 +1,5 @@
 
-let bigPic = document.querySelector("#cup");  
+let bigPic = document.querySelector("#bigPic");  
 let smallPics = document.querySelectorAll(".small");
 console.log(smallPics.length);
 
