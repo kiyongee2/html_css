@@ -1,4 +1,4 @@
-const today = new Date();
+let today = new Date();
 // console.log(today);
 
 // console.log(today.toDateString());
@@ -45,13 +45,17 @@ let clock = () => {
   let mins = current.getMinutes();
   let secs = current.getSeconds();
 
-  let period = "AM";
-  if (hrs === 0) {
-    hrs = 12;
-  } else if (hrs > 12) {
+  let sw = "AM";
+  if(hrs > 12){
     hrs = hrs - 12;
-    period = "PM";
+    sw = "PM"
   }
+  // if (hrs === 0) {
+  //   hrs = 12;
+  // } else if (hrs > 12) {
+  //   hrs = hrs - 12;
+  //   period = "PM";
+  // }
   
   hrs = (hrs < 10) ? "0" + hrs : hrs;
   mins = (mins < 10) ? "0" + mins : mins;
@@ -59,7 +63,7 @@ let clock = () => {
 
   // console.log(`${period} ${hrs} : ${mins} : ${secs}`);
 
-  displayTime.innerText = `${period}  ${hrs} : ${mins} : ${secs} `;
+  displayTime.innerText = `${sw}  ${hrs} : ${mins} : ${secs}`;
 }
 
 setInterval(clock, 1000);
