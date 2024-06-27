@@ -9,7 +9,7 @@ pw2.onchange = comparePw;
 console.log(id.value);
 
 function checkId(){
-  if(id.value === " "){
+  if(id.value.length === 0 || id.value === " "){
     alert("4~15자리의 영문과 숫자를 입력해주세요");
     id.focus();
     console.log(id.value);

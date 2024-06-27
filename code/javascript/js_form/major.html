@@ -38,7 +38,7 @@
                 </li>
                 <li>
                     <label for="class" class="reg">학 과</label>
-                    <select name="major" id="subj" onchange="displaySelect()">
+                    <select name="major" id="major">
                        <option>---- 학과 선택 ----</option>
                        <option value="건축학과">건축학과</option>
                        <option value="기계공학과">기계공학과</option>
@@ -53,9 +53,14 @@
 <script>
     //select 객체 변수 할당
     //let selectMenu = document.registerForm.major;
+    let values = document.getElementById("major").value
+    let options = document.querySelector("#major").options;
+
+    console.log(values);
+    console.log(options);
 
     function displaySelect(){
-        let selectedText = document.getElementById("subj").value;
+        let selectedText = document.getElementById("major").value;
         alert(selectedText + "가 선택되었습니다.");
     }
 </script>

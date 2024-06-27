@@ -1,0 +1,18 @@
+:root{
+  --blue-color: rgb(3, 3, 130);
+}
+h3{
+  color: var(--blue-color);
+}
+
+@media screen and (max-width: 768px){
+  .col-6{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .col-4{
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+}

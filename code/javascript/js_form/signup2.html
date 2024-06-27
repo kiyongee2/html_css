@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!-- <link rel="stylesheet" href="css/register.css"> -->
+  <link rel="stylesheet" href="css/register.css">
    <style>
     ul li{
         list-style: none;
@@ -37,12 +37,14 @@
                    <label><input type="radio" value="no" name="mailing">아니오</label>
                </li>
                <li>
-                   <input type="submit" value="가입하기" class="button">
+                   <input type="button" value="가입하기" class="button" onclick="checkMember()">
+                   <!-- <input type="submit" value="가입하기" class="button"> -->
                    <input type="reset" value="취소하기" class="button">
                </li>
            </ul>
         </form>
     </div>
+    <!-- <script src="js/validation2.js"></script> -->
     <script src="js/validation2.js"></script>
 </body>
 </html>
